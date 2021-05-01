@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class LoginCarroceiro extends StatelessWidget {
+  get onPressed => null;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.white,
+        color: Colors.black,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -27,8 +30,20 @@ class LoginCarroceiro extends StatelessWidget {
               ],
             ),
           ],
+        
         ),
       ),
     );
+
   }
+
+  widgetButton(){
+    return RaisedButton(
+     padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: onPressed,
+                    child: new Text("Add"),);
+  }
+  
 }
