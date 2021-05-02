@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class LoginCarroceiro extends StatelessWidget {
+  get onPressed => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.white,
+        //color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -15,20 +17,105 @@ class LoginCarroceiro extends StatelessWidget {
               //child: transfere a imagem do login aqui,
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Text("CADASTRO"),
-            Column(
-              children: [
-                Text("Nome: "),
-                Text("CPF: "),
-                Text("Telefone: "),
-                Text("Email: ")
-              ],
+            SizedBox(
+              child: Text(
+                "CADASTRO",
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center,
+              ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Nome",
+                labelStyle: TextStyle(
+                  //color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "CPF",
+                labelStyle: TextStyle(
+                  //color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Telefone",
+                labelStyle: TextStyle(
+                  // color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "E-mail",
+                labelStyle: TextStyle(
+                  //color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+
+            /*Container(
+              height: 40,
+              // ignore: deprecated_member_use
+              child: FlatButton(
+                child: Text(
+                  "Cadastre-se",
+                  textAlign: TextAlign.center,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupPage(),
+                    ),*/
           ],
         ),
       ),
+    );
+  }
+
+  widgetButton() {
+    // ignore: deprecated_member_use
+    return RaisedButton(
+      padding: const EdgeInsets.all(8.0),
+      //textColor: Colors.white,
+      //color: Colors.blue,
+      onPressed: onPressed,
+      child: new Text("Add"),
     );
   }
 }

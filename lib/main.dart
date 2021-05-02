@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Xpress',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue[800]),
+      /* theme: ThemeData(primarySwatch: Colors.blue[800]),*/
       home: LoginCarroceiro(),
     );
   }
