@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class LoginCarroceiro extends StatelessWidget {
   get onPressed => null;
 
+  get Addcadastro => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        //color: Colors.white,
+        color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -36,7 +38,7 @@ class LoginCarroceiro extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Nome",
                 labelStyle: TextStyle(
-                  //color: Colors.black38,
+                  color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -50,7 +52,7 @@ class LoginCarroceiro extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "CPF",
                 labelStyle: TextStyle(
-                  //color: Colors.black38,
+                  color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -64,7 +66,7 @@ class LoginCarroceiro extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Telefone",
                 labelStyle: TextStyle(
-                  // color: Colors.black38,
+                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -77,7 +79,7 @@ class LoginCarroceiro extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
-                  //color: Colors.black38,
+                  color: Colors.black38,
                   fontWeight: FontWeight.w400,
                   fontSize: 20,
                 ),
@@ -87,24 +89,21 @@ class LoginCarroceiro extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-
-            /*Container(
-              height: 40,
-              // ignore: deprecated_member_use
-              child: FlatButton(
-                child: Text(
-                  "Cadastre-se",
-                  textAlign: TextAlign.center,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SignupPage(),
-                    ),*/
+           widgetButton()
           ],
         ),
       ),
     );
   }
+  widgetButton()
+  {
+    return RaisedButton(
+    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.black,
+                    color: Colors.white,
+                    onPressed: Addcadastro,
+                    child: new Text("Cadastrar")
+    );
+  }
+
 }
