@@ -86,6 +86,20 @@ class LoginCarroceiro extends StatelessWidget {
               ),
               style: TextStyle(fontSize: 20),
             ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Senha",
+                labelStyle: TextStyle(
+                  //color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
             SizedBox(
               height: 10,
             ),
@@ -100,7 +114,7 @@ class LoginCarroceiro extends StatelessWidget {
     return RaisedButton(
     padding: const EdgeInsets.all(8.0),
                     textColor: Colors.black,
-                    color: Colors.white,
+                    color: CColors.blue[400],
                     onPressed: Addcadastro,
                     child: new Text("Cadastrar")
     );
